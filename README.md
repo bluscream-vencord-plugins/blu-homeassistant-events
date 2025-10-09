@@ -113,27 +113,6 @@ action:
       message: "{{ trigger.event.data.user_name }} joined"
 ```
 
-## Troubleshooting
-
-### CORS Errors (Web Discord Only)
-
-Desktop Discord bypasses CORS. For web Discord, add to `configuration.yaml`:
-
-```yaml
-http:
-  cors_allowed_origins:
-    - https://discord.com
-    - https://canary.discord.com
-    - https://ptb.discord.com
-```
-
-### Common Issues
-
-1. **Events not sending**: Verify Event URL/Webhook URL is correct
-2. **401/403 errors**: Check Bearer Token is valid
-3. **Connection refused**: Ensure HomeAssistant is accessible
-4. **Enable debug logging** in plugin settings to see detailed errors
-
 ## Installation
 
 1. Copy `blu-homeassistant-events` folder to `src/userplugins`
